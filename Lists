@@ -1,0 +1,40 @@
+""" sample input and output - 12
+insert 0 5
+insert 1 10
+insert 0 6
+print
+[6, 5, 10]
+remove 6
+append 9
+append 1
+sort
+print
+[1, 5, 9, 10]
+pop
+reverse
+print
+[9, 5, 1]
+
+"""
+
+if __name__ == '__main__':
+    N = int(input())
+listnew = []
+for i in range(N):
+    inputs = input().split()
+    if inputs[0] == "insert":
+        listnew.insert(int(inputs[1]),int(inputs[2]))
+    elif inputs[0] == "remove":
+        listnew.remove(int(inputs[1]))
+    elif inputs[0] == "append":
+        listnew.append(int(inputs[1]))
+    elif inputs[0] == "sort":
+        listnew.sort()
+    elif inputs[0] == "pop":
+        listnew.pop()
+    elif inputs[0] == "reverse":
+        listnew.reverse()
+    elif inputs[0] == "print":
+        print(listnew)
+    else:
+        print("Error")
